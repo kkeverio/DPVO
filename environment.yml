@@ -8,10 +8,10 @@ channels:
 dependencies:
   - pip
   - python=3.10
-  - pytorch=2.3.1
-  - pytorch-scatter=2.1.2
-  - pytorch-cuda=12.1
-  - torchvision=0.18
+  - pytorch
+  - pytorch-scatter
+  - pytorch-cuda=11.7    # ここを修正
+  - torchvision
   - pip:
     - tensorboard
     - numba
@@ -19,8 +19,9 @@ dependencies:
     - einops
     - pypose
     - kornia
-    - numpy==1.26.4
+    - numpy
     - plyfile
     - evo
     - opencv-python
     - yacs
+
