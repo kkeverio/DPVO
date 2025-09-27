@@ -161,3 +161,10 @@ datasets/TartanAir.pickle
 datasets/TartanAir
 TartanAirResults
 thirdparty/*
+
+auto_walking_classification/plot_result/*
+auto_walking_classification/*.txt
+movies/*
+trajectory_plots/*
+
+*.yml
