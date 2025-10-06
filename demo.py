@@ -84,6 +84,10 @@ if __name__ == '__main__':
     (poses, tstamps), (points, colors, calib) = run(cfg, args.network, args.imagedir, args.calib, args.stride, args.skip, args.viz, args.timeit)
     trajectory = PoseTrajectory3D(positions_xyz=poses[:,:3], orientations_quat_wxyz=poses[:, [6, 3, 4, 5]], timestamps=tstamps)
 
+    save_dir = "/home/kakerukoizumi/research/DPVO/auto_walking_classification/tmp_result"
+    save_path = os.path.join(save_dir, "poses.txt")
+  
+    np.savetxt(save_path, poses, fmt="%.6f", delimiter=" ")
     if args.save_ply:
         save_ply(args.name, points, colors)
 
